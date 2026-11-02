@@ -18,7 +18,7 @@ function displayEpisodes() {
   exitEpisodeBtn.textContent = 'X';
   const episodeContainerImage = document.createElement('img');
   episodeContainerImage.classList.add('episode-image');
-  episodeContainerImage.src = '/img/abelHorizontal.png';
+  episodeContainerImage.src = 'img/abelHorizontal.png';
 
   const productionType = document.createElement('div');
   productionType.classList.add('production-type');
@@ -98,49 +98,49 @@ let episodeNames = [
 const episodeInformation = [
   {
     id: 1,
-    image: '/img/abelKioka.png',
+    image: 'img/abelKioka.png',
     title: `1. Hola Me Llamo Freddy`,
     description: 'Abel loves his tlacuachita but does Kioka feel the same?'
   },
   {
     id: 2,
-    image: '/img/angryYogi.png',
+    image: 'img/angryYogi.png',
     title: `2. YOGGGIIIIIII`,
     description: `Kioka knows that it is Abel's turn, but does Yogi know this?`
   },
   {
     id: 3,
     title: `3. I AM NANDO!`,
-    image: '/img/abelScreaming.png',
+    image: 'img/abelScreaming.png',
     description: 'Abel is getting desparate to be inside that Pussy, and Nando is not going to make things any better.'
   },
   {
     id: 4,
-    image: '/img/lockedEpisode.png',
+    image: 'img/lockedEpisode.png',
     title: `4. Not Alone`,
     description: 'Things are not looking good, but maybe there are others who can help.'
   },
   {
     id: 5,
-    image: '/img/lockedEpisode.png',
+    image: 'img/lockedEpisode.png',
     title: `5. DID YOU DO THIS NANDO??!!!`,
     description: 'Abel needs to get his pussy, so it is time to face Nando and get Kioka, but some people can not believe he would do this.'
   },
   {
     id: 6,
-    image: '/img/lockedEpisode.png',
+    image: 'img/lockedEpisode.png',
     title: `6. Doubt`,
     description: 'What now?'
   },
   {
     id: 7,
-    image: '/img/lockedEpisode.png',
+    image: 'img/lockedEpisode.png',
     title: `7. Endgame Part 1`,
     description: 'This it. Nando can not be allowed to win.'
   },
   {
     id: 8,
-    image: '/img/lockedEpisode.png',
+    image: 'img/lockedEpisode.png',
     title: `8. Endgame Part 2`,
     description: 'It has all led to this. No sacrifice, no victory.'
   }

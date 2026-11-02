@@ -16,6 +16,21 @@ function displayEpisodes() {
   const exitEpisodeBtn = document.createElement('button');
   exitEpisodeBtn.classList.add('exit-episode-btn');
   exitEpisodeBtn.textContent = 'X';
+
+  exitEpisodeBtn.addEventListener('click', (e) => {
+    function closeContainer() {
+      contentContainer.style.width = '0';
+      episodeContainerImage.remove();
+      productionType.remove();
+      episodeListContainer.remove();
+      episodeList.remove();
+      exitEpisodeBtn.remove();
+      showName.remove();
+      episodeListTitle.remove();
+    }
+    requestAnimationFrame(closeContainer);
+  })
+
   const episodeContainerImage = document.createElement('img');
   episodeContainerImage.classList.add('episode-image');
   episodeContainerImage.src = 'img/abelHorizontal.png';
@@ -23,12 +38,15 @@ function displayEpisodes() {
   const productionType = document.createElement('div');
   productionType.classList.add('production-type');
   const productionTypeText = document.createElement('p');
+  productionTypeText.classList.add('production-type-text');
   productionTypeText.textContent = 'Nocturne Original';
 
   const productionGenre = document.createElement('p');
+  productionGenre.classList.add('production-genre-text');
   productionGenre.textContent = `Drama \u00B7 Action`;
 
-  const showName = document.createElement('h1');
+  const showName = document.createElement('h2');
+  showName.classList.add('show-name');
   showName.textContent = 'ABEL';
 
   const showDescription = document.createElement('p');
@@ -59,12 +77,15 @@ function displayEpisodes() {
     episodeImage.classList.add(`episode-image-${episode.id}`);
     episodeImage.src = episode.image;
 
-    episodeListItem.textContent = episode.title;
+    const episodeSpanTitle = document.createElement('span');
+    episodeSpanTitle.classList.add('span-title');
+    episodeSpanTitle.textContent = episode.title;
 
     const episodeDescription = document.createElement('p');
+    episodeDescription.classList.add('episode-description');
     episodeDescription.textContent = episode.description;
 
-    episodeListItem.append(episodeImage, episodeDescription);
+    episodeListItem.append(episodeImage, episodeSpanTitle, episodeDescription);
     episodeList.append(episodeListItem);
   })
 
@@ -112,7 +133,7 @@ const episodeInformation = [
     id: 3,
     title: `3. I AM NANDO!`,
     image: 'img/abelScreaming.png',
-    description: 'Abel is getting desparate to be inside that Pussy, and Nando is not going to make things any better.'
+    description: 'Abel is getting desparate for that Pussy, and Nando is not going to make things any better.'
   },
   {
     id: 4,
@@ -124,7 +145,7 @@ const episodeInformation = [
     id: 5,
     image: 'img/lockedEpisode.png',
     title: `5. DID YOU DO THIS NANDO??!!!`,
-    description: 'Abel needs to get his pussy, so it is time to face Nando and get Kioka, but some people can not believe he would do this.'
+    description: 'Abel needs to get his pussy, and some people can not believe Nando would do this.'
   },
   {
     id: 6,

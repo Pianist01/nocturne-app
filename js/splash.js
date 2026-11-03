@@ -1,21 +1,20 @@
 export function splashWindow() {
     window.addEventListener('load', () => {
-        const splashContainer = document.createElement('div');
-    splashContainer.classList.add('splash-container');
+        splash();
+    })
+}
 
-    const splashLogo = document.createElement('img');
-    splashLogo.classList.add('splash-logo');
-    splashLogo.src = 'img/nocturneLogoVertical.png';
+function splash() {
+    const splashContainer = document.querySelector('.splash-container');
 
-    splashContainer.append(splashLogo);
-    main.append(splashContainer);
+    const splashLogo = document.querySelector('.splash-logo');
+
     body.style.overflow = 'hidden';
 
     setTimeout(() => {
         splashContainer.classList.add('hide');
         body.style.overflow = '';
-    }, 3000);
-    })
+    }, 3000);  
 }
 
 const main = document.querySelector('main');

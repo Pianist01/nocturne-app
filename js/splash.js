@@ -13,9 +13,12 @@ function splash() {
 
     setTimeout(() => {
         splashContainer.classList.add('hide');
-        splashContainer.remove();
         body.style.overflow = '';
     }, 3000);  
+    
+    setTimeout(() => {
+        splashContainer.remove();
+    }, 4000)
 }
 
 const main = document.querySelector('main');

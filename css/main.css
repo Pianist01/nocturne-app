@@ -333,6 +333,8 @@ li img {
   /* object-fit: contain; */
   grid-row: 1/-1;
   grid-column: 1/-1;
+  border: none;
+  outline: none;
 }
 
 .exit-vid-btn {
@@ -346,7 +348,7 @@ li img {
   height: 30px;
   border-radius: 5px;
   color: black;
-  margin-top: 4.5%;
+  margin-top: calc(env(safe-area-inset-top) + 20px);
 }
 
 /* MEDIA QUERIES */

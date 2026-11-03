@@ -96,7 +96,7 @@ main {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
-    min-height: 100vh;
+    min-height: 100dvh;
     height: auto;
     width: 100%;
     overflow-x: hidden;

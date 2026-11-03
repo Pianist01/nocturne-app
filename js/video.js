@@ -15,7 +15,7 @@ export function displayVideo(id) {
   videoIframe.setAttribute('fullScreen', 'autoplay: fullscreen');
 
   videoContainer.append(videoIframe, closeVideoBtn);
-  main.append(videoContainer);
+  body.append(videoContainer);
   
   closeVideoBtn.addEventListener('click', (e) => {
     e.preventDefault();
@@ -25,6 +25,7 @@ export function displayVideo(id) {
   })
 }
 
+const body = document.querySelector('body');
 const main = document.querySelector('main');
 
 

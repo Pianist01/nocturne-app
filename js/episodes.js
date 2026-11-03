@@ -1,3 +1,5 @@
+import {  displayVideo  } from './video.js';
+
 export function watchNow() {
   watchNowBtn.addEventListener('click', (e) => {
     displayEpisodes();
@@ -69,9 +71,11 @@ function displayEpisodes() {
   const episodeList = document.createElement('ul');
   episodeList.classList.add('episode-UL');
 
-  episodeInformation.forEach((episode) => {
+ episodeInformation.forEach((episode) => {
     const episodeListItem = document.createElement('li');
     episodeListItem.classList.add(`episode-${episode.id}`);
+
+    episodeListItem.setAttribute('episode-id', episode.id);
 
     const episodeImage = document.createElement('img');
     episodeImage.classList.add(`episode-image-${episode.id}`);
@@ -88,6 +92,16 @@ function displayEpisodes() {
     episodeListItem.append(episodeImage, episodeSpanTitle, episodeDescription);
     episodeList.append(episodeListItem);
   })
+
+  episodeList.addEventListener('click', (e) => {
+    const closestId = e.target.closest('li');
+      console.log(closestId);
+      const episodeId = closestId.getAttribute('episode-id');
+      const numberId = Number(episodeId) - 1;
+      console.log(numberId);
+      displayVideo(numberId);
+    })
+
 
   contentContainer.append(exitEpisodeBtn, episodeContainerImage, productionType, episodeListContainer, episodeListTitle, episodeList);
 

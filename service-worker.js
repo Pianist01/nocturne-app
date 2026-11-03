@@ -1,4 +1,4 @@
-const CACHE_NAME = 'nocturne-v3';
+const CACHE_NAME = 'nocturne-v4';
 
 const FILES_TO_CACHE = [
     './',

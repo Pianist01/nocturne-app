@@ -13,6 +13,7 @@ function splash() {
 
     setTimeout(() => {
         splashContainer.classList.add('hide');
+        splashContainer.remove();
         body.style.overflow = '';
     }, 3000);  
 }

@@ -16,6 +16,13 @@ export function displayVideo(id) {
 
   videoContainer.append(videoIframe, closeVideoBtn);
   main.append(videoContainer);
+  
+  closeVideoBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    videoContainer.remove();
+    videoIframe.remove();
+    closeVideoBtn.remove();
+  })
 }
 
 const main = document.querySelector('main');

@@ -35,7 +35,7 @@ function displayEpisodes() {
 
   const episodeContainerImage = document.createElement('img');
   episodeContainerImage.classList.add('episode-image');
-  episodeContainerImage.src = 'img/abelHorizontal.png';
+  episodeContainerImage.src = 'img/abelHorizontalFixed.png';
 
   const productionType = document.createElement('div');
   productionType.classList.add('production-type');
@@ -112,23 +112,6 @@ function displayEpisodes() {
 
   main.append(contentContainer);
 }
-
-let episodeImages = [
-  '/img/abelKioka.png',
-  '/img/angryYogi.png',
-  '/img/abelScreaming.png'
-];
-
-let episodeNames = [
-  `1. Hola Me Llamo Freddy`,
-  `2. YOGGGIIIIIII`,
-  `3. I AM NANDO!`,
-  `4. Not Alone`,
-  `5. Did You Do This NANDO?!!`,
-  `6. Doubt`,
-  `7. Endgame Part 1`,
-  `8. Endgame Part 2`
-];
 
 const episodeInformation = [
   {

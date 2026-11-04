@@ -197,7 +197,7 @@ main {
 
 .exit-episode-btn {
   position: fixed;
-  top: calc(env(safe-area-inset-top) + 30px);
+  top: calc(env(safe-area-inset-top) + 20px);
   right: 20px;
   grid-row: 1/2;
   grid-column: 1/2;

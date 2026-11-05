@@ -2,7 +2,13 @@ import {  displayVideo  } from './video.js';
 
 export function watchNow() {
   watchNowBtn.addEventListener('click', (e) => {
+    e.preventDefault();
     displayEpisodes();
+    globalThis.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
     console.log('clicked');
   });
 }

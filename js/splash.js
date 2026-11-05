@@ -1,7 +1,5 @@
 export function splashWindow() {
-    window.addEventListener('load', () => {
-        splash();
-    })
+   splash();
 }
 
 function splash() {

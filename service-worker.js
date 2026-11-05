@@ -1,4 +1,5 @@
-const CACHE_NAME = 'nocturne-v7';
+const APP_VERSION = '1.0.1';
+const CACHE_NAME = `nocturne-v${APP_VERSION}`;
 
 const FILES_TO_CACHE = [
     './',

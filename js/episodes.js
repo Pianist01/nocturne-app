@@ -140,7 +140,7 @@ const episodeInformation = [
   },
   {
     id: 4,
-    image: 'img/lockedEpisode.png',
+    image: 'img/nandoSmirk.png',
     title: `4. Not Alone`,
     description: 'Things are not looking good, but maybe there are others who can help.'
   },

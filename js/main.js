@@ -1,12 +1,12 @@
 import {  watchNow  } from './episodes.js';
 import {    splashWindow   } from './splash.js';
-import { profileSection } from './profiles.js';
+import { displayProfileSection } from './profiles.js';
 
 console.log(navigator.serviceWorker); 
 
 splashWindow();
 watchNow();
-profileSection();
+displayProfileSection();
 
 if('serviceWorker' in navigator) {
     navigator.serviceWorker.register('./service-worker.js')

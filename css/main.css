@@ -356,6 +356,17 @@ li img {
   margin-top: calc(env(safe-area-inset-top) + 20px);
 }
 
+/* PROFILES */
+
+.profile-section-container {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100dvh;
+  z-index: 2;
+  background-color: #0b0b0f;
+}
+
 /* MEDIA QUERIES */
 
 @media (min-width: 414px) {

@@ -41,7 +41,7 @@ function displayEpisodes() {
 
   const episodeContainerImage = document.createElement('img');
   episodeContainerImage.classList.add('episode-image');
-  episodeContainerImage.src = 'img/abelHorizontalFixed.png';
+  episodeContainerImage.src = 'img/abelKneeling.png';
 
   const productionType = document.createElement('div');
   productionType.classList.add('production-type');
@@ -146,7 +146,7 @@ const episodeInformation = [
   },
   {
     id: 5,
-    image: 'img/lockedEpisode.png',
+    image: 'img/pelican.png',
     title: `5. DID YOU DO THIS NANDO??!!!`,
     description: 'Abel needs to get his pussy, and some people can not believe Nando would do this.'
   },

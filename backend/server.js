@@ -19,6 +19,29 @@ function receieveRequestResponse(request, response) {
                 response.end('Welcome to the Nocturne Backend!');
             } else if(request.url === '/api/profile') {  
                 response.end(JSON.stringify(profile));
+            } else if(request.url.startsWith('/api/episodes/')) {
+                const split = request.url.split('/');
+                if(split.length !== 4) {
+                    response.statusCode = 400;
+                    response.end('Invalid Episode URL');
+                    return;
+                }
+                const extractId = split[3];
+                const idToNumber = Number(extractId);
+
+                if(idToNumber <= 0 || Number.isNaN(idToNumber) || !Number.isInteger(idToNumber)) {
+                    response.statusCode = 400;
+                    response.end('Invalid episode ID'); 
+                    return;
+                }
+    
+                if(request.url === `/api/episodes/${String(idToNumber)}`) {
+                    response.end(`Episode Requested: ${idToNumber}`); 
+                
+             } else {
+                response.statusCode = 400;
+                response.end('Invalid episode URL');
+             } 
             } else {
                 response.statusCode = 404;
                 response.setHeader('Content-Type', 'text/plain');

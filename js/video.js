@@ -49,5 +49,9 @@ export let episodeList = [
   {
     id: 5,
     link: 'https://customer-rfs47g2sesk68o5o.cloudflarestream.com/4990bf61f945e4794e3bea4459fe3c9c/iframe?poster=https%3A%2F%2Fcustomer-rfs47g2sesk68o5o.cloudflarestream.com%2F4990bf61f945e4794e3bea4459fe3c9c%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600&autoplay=true'
+  },
+  {
+    id: 6,
+    link: 'https://customer-rfs47g2sesk68o5o.cloudflarestream.com/0effc1a10e73c8038462e5cd383ee586/iframe?poster=https%3A%2F%2Fcustomer-rfs47g2sesk68o5o.cloudflarestream.com%2F0effc1a10e73c8038462e5cd383ee586%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600&autoplay=true'
   }
 ]

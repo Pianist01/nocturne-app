@@ -152,7 +152,7 @@ const episodeInformation = [
   },
   {
     id: 6,
-    image: 'img/lockedEpisode.png',
+    image: 'img/doubt.png',
     title: `6. Doubt`,
     description: 'What now?'
   },

@@ -7,6 +7,24 @@ const profile = {
     favoriteEpisodes: [1, 3, 5]
 }
 
+const episodes = [
+    {
+        id: 1,
+        title: 'The Beginning',
+        duration: 620
+    },
+    {
+        id: 2,
+        title: 'The Journey',
+        duration: 705
+    },
+    {
+        id: 3,
+        title: 'Doubt',
+        duration: 660
+    }
+]
+
 const server = createServer(receieveRequestResponse);
 server.listen(3000);
 
@@ -31,24 +49,43 @@ function receieveRequestResponse(request, response) {
 
                 if(idToNumber <= 0 || Number.isNaN(idToNumber) || !Number.isInteger(idToNumber)) {
                     response.statusCode = 400;
-                    response.end('Invalid episode ID'); 
-                    return;
+                    response.end('Invalid episode ID');  
+                    return;  
                 }
     
                 if(request.url === `/api/episodes/${String(idToNumber)}`) {
-                    response.end(`Episode Requested: ${idToNumber}`); 
+                    const foundEpisode = episodes.find(function(episode) {
+                        return episode.id === idToNumber;  
+                    })
+                    console.log(foundEpisode);
+                    const episodeToString = JSON.stringify(foundEpisode);
+                    if(episodeToString) { 
+                        response.statusCode = 200;
+                        response.setHeader('Content-Type', 'application/json');
+                        response.end(episodeToString);
+                    } else if(foundEpisode === undefined) { 
+                        response.statusCode = 404; 
+                        response.setHeader('Content-Type', 'text/plain');
+                        response.end('Episode not found');
+                    }
                 
              } else {
                 response.statusCode = 400;
-                response.end('Invalid episode URL');
+                response.end('Invalid episode URL'); 
              } 
-            } else {
-                response.statusCode = 404;
+            } else if(request.url === '/api/episodes') {
+                response.statusCode = 200;
+                response.setHeader('Content-Type', 'application/json');
+                const episodeObjectString = JSON.stringify(episodes);
+                response.end(episodeObjectString);
+            } else { 
+                response.statusCode = 404; 
                 response.setHeader('Content-Type', 'text/plain');
                 response.end('Route not found');
             }
+            
 
-    } else if(request.method === 'POST') {
+    } else if(request.method === 'POST') {  
         response.setHeader('Content-Type', 'text/plain');
         
              if(request.url === '/api/profile') {
@@ -123,7 +160,7 @@ function receieveRequestResponse(request, response) {
             response.end('Profile deleted successfully');
         } else {
             response.statusCode = 404;
-            response.end('Route not found');    
+            response.end('Route not found');
         }
     }
 }
